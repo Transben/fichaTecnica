@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+.containerAlertSave{
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    background: rgba(189, 189, 189, 0);
+    display: none;
+}
+.containerAlert{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0 0 30px 30px;
+}
+.containerAlert p{
+    font-family: 'Mukta', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    margin-right: 10px;
+}

@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    width: 100vw;
+    height: 100vh; 
+}
+canvas{
+    border: 1px rgb(129, 129, 129) dashed;
+}
+.containerHeaderIndex{
+    width: 100vw;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(18, 72, 173);
+}
+.containerHeaderIndex img{
+    margin-bottom: 10px;
+    width: 60px;
+}
+.containerHeaderIndex p{
+    font-family: 'Mukta', sans-serif;
+    font-size: 30px;
+    color: #ffffff;
+}
+.containerMainIndex{
+    width: 100vw;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerDados{
+    width: 500px;
+    height: auto;
+    background: rgb(248, 248, 248);
+}
+
+/* CONTAINER INFORME A FROTA */
+.containerRecebidoFrota{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.containerRecebidoFrota p{
+    font-family: 'Mukta', sans-serif;
+    margin-left: 30px;
+    font-size: 18px;
+}
+.containerRecebidoFrota input{
+    margin-left: 10px;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #cecece;
+    width: 45%;
+    height: 40px;
+    outline: 0px;
+}
+/* END */
+/* CONTAINER INFORME INSTRUTOR */
+.containerRecebidoInstrutor{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerRecebidoInstrutor p{
+    font-family: 'Mukta', sans-serif;
+    margin-left: 30px;
+    font-size: 18px;
+}
+.containerRecebidoInstrutor input{
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #cecece;
+    width: 80%;
+    height: 40px;
+    outline: 0px;
+}
+.containerRecebidoInstrutor select{
+    width: 80%;
+    height: 40px;
+    outline: 0px;
+    border: none;
+    text-align: center;
+    border-radius: 4px;
+    border: 1px solid #cecece;
+}
+/* END */
+
+.containerIntruidoSobre{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.paragrafoInstruido{
+    font-family: 'Mukta', sans-serif;
+    margin-left: 30px;
+    font-size: 18px;
+    font-weight: 600;
+}
+.containerIntruidoSobre li{
+    text-decoration: none;
+    list-style:none;
+    margin-left: 30px;
+    font-family: 'Mukta', sans-serif;
+}
+
+/* CONTAINER GERAR PDF */
+.containerEnviar{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.containerInput{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.containerInput p{
+    font-family: 'Mukta', sans-serif;
+    margin-left: 10px;
+}
+.containerInput button{
+    background: rgb(21, 138, 21);
+    border-radius: 5px;
+    width: 120px;
+    height: 50px;
+    border: none;
+    color: #ffffff;
+    padding: 0 10px;
+}
+.containerAssMotorista{
+    width: 100%;
+    height: auto;
+    margin-top: 30px;
+    border: 1px solid solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.containerTitulo{
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.containerTitulo p{
+    font-size: 20px !important;
+    font-family: 'Mukta', sans-serif;
+}
+.containerClear{
+    margin-top: 10px;
+    width: 85%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.containerClear button{
+    width: 80px;
+    height: 40px;
+    background: transparent;
+    border:2px solid rgb(16, 93, 236);
+    color:rgb(16, 93, 236);
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.containerClear img{
+    margin-top: 10px;
+}
+.addMotorista img,
+.addInstrutor img{
+    margin-top: 0px;
+}
+
+@media (max-width: 600px)
+{
+    .containerRecebidoFrota{
+        margin-top: 30px;
+        margin-bottom: 20px;
+        flex-direction: column;
+    }
+    .containerRecebidoFrota input{
+        width: 85%;
+    }
+    .containerRecebidoInstrutor{
+        margin-bottom: 30px;
+    }
+    .containerDados{
+        width: 350px;
+    }
+}
