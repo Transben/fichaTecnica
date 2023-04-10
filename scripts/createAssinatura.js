@@ -20,7 +20,7 @@ function assinaturaMotorista() {
     botaoLimpar.addEventListener('click', limparAssinatura);
     function limparAssinatura() {
         signaturePad.clear();
-        localStorage.removeItem('assinaturaMotorista')
+        localStorage.setItem('assinaturaMotorista', '')
     }
 
     /* SALVA IMAGEM NO LOCALSTAGE EM BASE64 */
@@ -28,6 +28,7 @@ function assinaturaMotorista() {
     botaoSalvar.addEventListener('click', salvarAssinaturaMotorista);
     function salvarAssinaturaMotorista() {
         var dataURLMotorista = signaturePad.toDataURL();
+        /* LIMPAMOS O VALUE SETANDO UM VALOR VAZIO, MUDEI A ABORAGEM DE removeItem */
         localStorage.setItem('assinaturaMotorista', dataURLMotorista);
     }
 }
@@ -54,7 +55,8 @@ function assinaturaInstrutor() {
     botaoLimpar.addEventListener('click', limparAssinatura);
     function limparAssinatura() {
         signaturePad.clear();
-        localStorage.removeItem('assinaturaInstrutor')
+        /* LIMPAMOS O VALUE SETANDO UM VALOR VAZIO, MUDEI A ABORAGEM DE removeItem */
+        localStorage.setItem('assinaturaInstrutor', '')
     }
 
     /* SALVA IMAGEM NO LOCALSTAGE EM BASE64 */

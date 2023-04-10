@@ -6,8 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="../style/style.css">
-    <link rel="stylesheet" href="../style//AlertSave.css">
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="./style/AlertSave.css">
 
     <title>Ficha Tecnica</title>
 </head>
@@ -21,7 +21,7 @@
     </div>
 
     <div class="containerHeaderIndex">
-        <img src="../img/tbbrancopng.png" alt="">
+        <img src="./img/tbbrancopng.png" alt="">
         <p>Termo para ficha tecnica</p>
     </div>
 
@@ -36,7 +36,7 @@
                 <input type="text" placeholder="Digite aqui..." class="instrutorResponsavel">
             </div>
             <div class="containerRecebidoInstrutor">
-                <p>Fui devidamente orientado pelo instrutor:</p>
+                <p>Do seguinte veiculo:</p>
                 <select id="mySelect" onclick="getCaminhao()">
                     <option value="Volvo">Volvo</option>
                     <option value="Scania">Scania</option>
@@ -55,37 +55,42 @@
                     <li>PREENCHIMENTO DO TACÓGRAFO.</li>
                     <li>KM DE REVISÕES.</li>
                     <li>MÉDIA.</li>
-                    <li>ARLA.</li>
                     <li>TANQUE PRINCIPAL E AUXILIAR</li>
                     <li>BUJÕES DE AR.</li>
-                    <li>BOTÃO DE REGENERAÇÃO DO CATALISADOR DO DAF.</li>
-                    <li>CONTROLE DE TRAÇÃO.</li>
                     <li>FREIO MOTOR.</li>
                     <li>PILOTO AUTOMÁTICO.</li>
                     <li>CONFIGURAÇÕES DO COMPUTADOR DE BORDO.</li>
-                    <li>BOTÃO PUSH TO SUPPLY DO SCANIA.</li>
                     <li>EQUIPAMENTO REBOQUE.</li>
-                    <li>QUINTA RODA.</li>
-                    <li>TRAVA E MANOBRA DO ENGATE/DESENGATE.</li>
-                    <li>MANGUEIRAS.</li>
-                    <li>DOLLY.</li>
-                    <li>ENLONAMENTO DA CAÇAMBA.</li>
-                    <li>MONTAGEM E DESMONTAGEM DO SIDER.</li>
+                </ul>
+
+                <p class="titleOpcoes">Opções adicionais</p>
+
+                <ul>
+                    <li><input type="checkbox" name="ARLA" value="ARLA">ARLA.</li>
+                    <li><input type="checkbox" name="BOTÃO DE REGENERAÇÃO DO CATALISADOR DO DAF." value="BOTÃO DE REGENERAÇÃO DO CATALISADOR DO DAF.">BOTÃO DE REGENERAÇÃO DO CATALISADOR DO DAF.</li>
+                    <li><input type="checkbox" name="CONTROLE DE TRAÇÃO." value="CONTROLE DE TRAÇÃO.">CONTROLE DE TRAÇÃO.</li>
+                    <li><input type="checkbox" name="BOTÃO PUSH TO SUPPLY DO SCANIA." value="BOTÃO PUSH TO SUPPLY DO SCANIA.">BOTÃO PUSH TO SUPPLY DO SCANIA.</li>
+                    <li><input type="checkbox" name="QUINTA RODA." value="QUINTA RODA.">QUINTA RODA</li>
+                    <li><input type="checkbox" name="TRAVA E MANOBRA DO ENGATE/DESENGATE." value="TRAVA E MANOBRA DO ENGATE/DESENGATE.">TRAVA E MANOBRA DO ENGATE/DESENGATE.</li>
+                    <li><input type="checkbox" name="MAGUEIRAS." value="MAGUEIRAS.">MAGUEIRAS.</li>
+                    <li><input type="checkbox" name="DOLLY." value="DOLLY.">DOLLY.</li>
+                    <li><input type="checkbox" name="ENLONAMENTO DA CAÇAMBA." value="ENLONAMENTO DA CAÇAMBA.">ENLONAMENTO DA CAÇAMBA.</li>
+                    <li><input type="checkbox" name="MONTAGEM E DESMONTAGEM DO SIDER." value="MONTAGEM E DESMONTAGEM DO SIDER.">MONTAGEM E DESMONTAGEM DO SIDER.</li>
                 </ul>
 
                 <!-- CONTAINER ASSINATURA MOTORISTA -->
                 <div class="containerAssMotorista">
                     <div class="containerTitulo">
                         <p>Assinatura do motorista</p>
-                        <img src="../icon//driver.png" alt="">
+                        <img src="./icon//driver.png" alt="">
                     </div>
                     <!-- CANVAS DA ASSINATURA -->
                     <canvas id="canvas">
                     </canvas>
                     <div class="containerClear">
-                        <img src="../icon/clear.png" alt="" id="limparAssinaturaMotorista">
+                        <img src="./icon/clear.png" alt="" id="limparAssinaturaMotorista">
                         <button class="addMotorista">
-                            <img src="../icon/save.png" alt="">
+                            <img src="./icon/save.png" alt="">
                             <p>Salvar</p>
                         </button>
                     </div>
@@ -95,15 +100,15 @@
                 <div class="containerAssMotorista">
                     <div class="containerTitulo">
                         <p>Assinatura do Instrutor</p>
-                        <img src="../icon/instrutor.png" alt="">
+                        <img src="./icon/instrutor.png" alt="">
                     </div>
                     <!-- CANVAS DA ASSINATURA -->
                     <canvas id="canvasInstrutor">
                     </canvas>
                     <div class="containerClear">
-                        <img src="../icon/clear.png" alt="" id="limparAssinaturaInstrutor">
+                        <img src="./icon/clear.png" alt="" id="limparAssinaturaInstrutor">
                         <button class="addInstrutor">
-                            <img src="../icon/save.png" alt="">
+                            <img src="./icon/save.png" alt="">
                             <p>Salvar</p>
                         </button>
                     </div>
@@ -125,15 +130,21 @@
         </div>
     </div>
 
+    <script>
+        localStorage.setItem('assinaturaMotorista', 'inicio');
+        localStorage.setItem('assinaturaInstrutor', 'inicio');
+    </script>
 
-    <script src="../scripts/createAssinatura.js"></script>
-    <script src="../scripts/addLocalStorage.js"></script>
-    <script src="../scripts//modalSalvo.js"></script>
-    <script src="../scripts//addArray.js"></script>
-    <script type="module" src="../scripts/gerarPDF/pdf.js"></script>
-    <script type="module" src="../scripts/dataAtual.js"></script>
+
+    <script src="./scripts/createAssinatura.js"></script>
+    <script src="./scripts/addLocalStorage.js"></script>
+    <script src="./scripts/modalSalvo.js"></script>
+    <script src="./scripts/addArray.js"></script>
+    <script src="./scripts/opcoesAdicionais.js"></script>
+    <script type="module" src="./scripts/gerarPDF/pdf.js"></script>
+    <script type="module" src="./scripts/dataAtual.js"></script>
     <!-- CDN DA BIBLIOTECA DE ASSINATURA -->
-    <script type="module" src="../img/logo64.js"></script>
+    <script type="module" src="./img/logo64.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
 
     <!-- CND DA BIBLIOTECA DE PDF -->
