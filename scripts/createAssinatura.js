@@ -20,6 +20,7 @@ function assinaturaMotorista() {
     botaoLimpar.addEventListener('click', limparAssinatura);
     function limparAssinatura() {
         signaturePad.clear();
+        /* LIMPAMOS O VALUE SETANDO UM VALOR VAZIO, MUDEI A ABORAGEM DE removeItem */
         localStorage.setItem('assinaturaMotorista', '')
     }
 
@@ -28,7 +29,6 @@ function assinaturaMotorista() {
     botaoSalvar.addEventListener('click', salvarAssinaturaMotorista);
     function salvarAssinaturaMotorista() {
         var dataURLMotorista = signaturePad.toDataURL();
-        /* LIMPAMOS O VALUE SETANDO UM VALOR VAZIO, MUDEI A ABORAGEM DE removeItem */
         localStorage.setItem('assinaturaMotorista', dataURLMotorista);
     }
 }
