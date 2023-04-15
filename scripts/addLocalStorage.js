@@ -1,5 +1,13 @@
 
 /* CRIA NO LOCALSTORE O VALOR DO INPUT DE FROTA */
+let addNomeMotorista = document.querySelector('.nomeMotorista');
+addNomeMotorista.addEventListener('blur', addLocalStorageNomeMotorista);
+function addLocalStorageNomeMotorista(){
+    let nomeMotorista = document.querySelector('.nomeMotorista').value;
+    localStorage.setItem('nomeMotorista', nomeMotorista);
+}
+
+/* CRIA NO LOCALSTORE O VALOR DO INPUT DE FROTA */
 let addFrota = document.querySelector('.frotaAtual');
 addFrota.addEventListener('blur', addLocalStorageFrota);
 function addLocalStorageFrota(){

@@ -12,7 +12,8 @@ function gerarPDF() {
 
     doc.addImage(imgData, 'JPEG', 10, 10, 90, 20);
     doc.text("ENTREGA TÉCNICA TRANSBEN", 60, 50);
-    doc.text(`Declaro ter recebido a frota ${localStorage.getItem('frota')} e fui devidamente orientado pelo`, 10, 70);
+
+    doc.text(`Eu ${localStorage.getItem('nomeMotorista')} declaro ter recebido a frota ${localStorage.getItem('frota')} e fui devidamente orientado pelo`, 10, 70);
     doc.text(`instrutor ${localStorage.getItem('instrutor')}, a respeito dos seguintes temas:`, 10, 77);
 
     // Define a fonte e o estilo "oblique" para todos os textos
