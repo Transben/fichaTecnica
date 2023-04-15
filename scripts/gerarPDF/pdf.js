@@ -13,7 +13,7 @@ function gerarPDF() {
     doc.addImage(imgData, 'JPEG', 10, 10, 90, 20);
     doc.text("ENTREGA TÉCNICA TRANSBEN", 60, 50);
 
-    doc.text(`Eu ${localStorage.getItem('frota')}`, 10, 70);
+    doc.text(`Eu ${localStorage.getItem('nomeMotorista')}`, 10, 70);
     doc.text(`Declaro ter recebido a frota ${localStorage.getItem('frota')} e fui devidamente orientado pelo`, 10, 77);
     doc.text(`instrutor ${localStorage.getItem('instrutor')}, a respeito dos seguintes temas:`, 10, 84);
 
@@ -29,10 +29,12 @@ function gerarPDF() {
     }
 
     doc.addImage(assinaturaMotosita, 'JPEG', 10, 220, 50, 50);
-    doc.text("Assinatura Motorista", 30, 265);
+    doc.text(`${localStorage.getItem('nomeMotorista')}`, 35, 265);
+    doc.text("Assinatura Motorista", 30, 270);
 
     doc.addImage(assinaturaInstrutor, 'JPEG', 130, 220, 50, 50);
-    doc.text("Assinatura Instrutor", 150, 265);
+    doc.text(`${localStorage.getItem('instrutor')}`, 155, 265);
+    doc.text("Assinatura Instrutor", 150, 270);
 
     doc.text(`${data}`, 95, 260);
     doc.text("Data", 100, 265);
